@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Online Quiz
 ![developer](https://img.shields.io/badge/Developed%20By%20%3A-Sumit%20Kumar-red)
 ---
@@ -77,3 +78,7 @@ EMAIL_RECEIVING_USER = 'youremail@gmail.com'
 Any suggestion and feedback is welcome. You can message me on facebook
 - [Contact on Facebook](https://fb.com/sumit.luv)
 - [Subscribe my Channel LazyCoder On Youtube](https://youtube.com/lazycoders)
+=======
+# UniversityBasedQuizPlatform
+University based Quiz Web Application which helps the students to enhance their learning by giving online exams and quizzes. It also help the faculty to track the progress of the student and Makes easy for academic grade markings.
+>>>>>>> 2948b0dac4760ec1ed6485933008f04945cef3f5
