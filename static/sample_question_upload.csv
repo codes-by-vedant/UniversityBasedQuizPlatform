@@ -1,0 +1,4 @@
+Question,Option1,Option2,Option3,Option4,CorrectAnswer,Marks
+What is the output of print(2+3)?,4,5,6,7,5,1
+Which keyword is used to define a function in Python?,func,define,def,lambda,def,1
+Java is a __ language.,procedural,functional,object-oriented,scripting,object-oriented,1

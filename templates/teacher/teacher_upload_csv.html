@@ -1,0 +1,42 @@
+{% extends 'teacher/teacherbase.html' %}
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-info text-white">
+          <h4>Bulk Upload Questions via CSV</h4>
+        </div>
+        <div class="card-body">
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="course">Select Exam Category</label>
+              <select class="form-control" name="course" id="course" required>
+                {% for course in courses %}
+                  <option value="{{ course.id }}">{{ course.course_name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="csv_file">Upload CSV File</label>
+              <input type="file" class="form-control-file" id="csv_file" name="csv_file" accept=".csv" required>
+            </div>
+            <div class="alert alert-info mt-3">
+              <strong>Instructions:</strong>
+              <ul>
+                <li>Download the <a href="/static/sample_question_upload.csv" target="_blank">sample CSV file</a> for reference.</li>
+                <li>Columns must be: <b>Question, Option1, Option2, Option3, Option4, CorrectAnswer, Marks</b>.</li>
+                <li><b>CorrectAnswer</b> should match exactly one of the options (case-sensitive).</li>
+                <li>Each row represents one question.</li>
+                <li>After selecting the category and uploading the file, click Upload to add all questions.</li>
+              </ul>
+            </div>
+            <button type="submit" class="btn btn-success">Upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
